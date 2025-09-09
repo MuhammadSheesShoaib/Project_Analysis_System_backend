@@ -1,0 +1,56 @@
+FastAPI Backend for Project Analysis System
+
+This backend system takes a project description and uses Groq's LLM to generate
+a complete structured analysis including difficulty, roadmap, tech stack, timeline,
+team structure, and cost estimates.
+
+Example Request:
+POST /analyze_project
+{
+    "project_description": "Build an e-commerce platform with AI-powered product recommendations"
+}
+
+Example Response:
+{
+    "difficulty_level": "Hard",
+    "project_pipeline": [
+        {
+            "phase": "Planning & Architecture",
+            "duration": "2-3 weeks",
+            "deliverables": ["Technical architecture", "Database design", "API specifications"]
+        }
+    ],
+    "tech_stack": {
+        "frontend": ["React", "TypeScript", "Tailwind CSS"],
+        "backend": ["Node.js", "Express", "Python"],
+        "ai_ml": ["TensorFlow", "scikit-learn"],
+        "database": ["PostgreSQL", "Redis"],
+        "cloud_devops": ["AWS", "Docker", "GitHub Actions"]
+    },
+    "timeline": {
+        "total_duration": "4-6 months",
+        "phases": [
+            {"phase": "Planning", "duration": "2-3 weeks"},
+            {"phase": "Development", "duration": "12-16 weeks"}
+        ]
+    },
+    "team_structure": [
+        {
+            "role": "Backend Developer",
+            "count": 2,
+            "time_commitment": "40 hours/week",
+            "responsibilities": ["API development", "Database design"]
+        }
+    ],
+    "risks_challenges": [
+        "Scalability concerns with high traffic",
+        "AI model accuracy and performance"
+    ],
+    "cost_estimate": "Medium",
+    "structured_report": {
+        "project_feasibility": "High",
+        "complexity_score": 7.5,
+        "success_probability": "75%"
+    }
+}
+
